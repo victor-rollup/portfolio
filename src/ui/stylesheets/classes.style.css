@@ -1,0 +1,69 @@
+/* --------------------------------------------------------------------------------------------- */
+.icon {
+  --icon-dimension: 1.5rem;
+  min-height: var(--icon-dimension);
+  min-width: var(--icon-dimension);
+  height: var(--icon-dimension);
+  width: var(--icon-dimension);
+}
+/* --------------------------------------------------------------------------------------------- */
+.row,
+.column,
+.row-reverse,
+.column-reverse {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.column-reverse {
+  flex-direction: column-reverse;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+/* --------------------------------------------------------------------------------------------- */
+.text-truncate {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis; /* add "..." */
+  white-space: nowrap; /* avoid line break */
+  vertical-align: bottom;
+}
+
+.text-truncate-multiline {
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2; /* line number */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.text-truncate-multiline:hover {
+  line-clamp: unset;
+  -webkit-line-clamp: unset;
+  white-space: normal;
+}
+/* --------------------------------------------------------------------------------------------- */
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+/* --------------------------------------------------------------------------------------------- */
+.clickable:active {
+  transform: scale(0.98);
+}
+/* --------------------------------------------------------------------------------------------- */
