@@ -1,0 +1,1928 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="web_standard" name="shell-type" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'secondary-fixed': '#c9e6ff',
+              'surface-container-highest': '#273647',
+              'primary-fixed-dim': '#7bd0ff',
+              'on-surface-variant': '#bdc8d1',
+              'surface-bright': '#2c3a4c',
+              background: '#051424',
+              'surface-dim': '#051424',
+              'surface-container-lowest': '#010f1f',
+              'secondary-fixed-dim': '#89ceff',
+              'on-tertiary-container': '#004e34',
+              'surface-variant': '#273647',
+              'on-tertiary-fixed-variant': '#005236',
+              surface: '#051424',
+              'tertiary-fixed-dim': '#4edea3',
+              'surface-container-low': '#0d1c2d',
+              'inverse-primary': '#00668a',
+              'secondary-container': '#00a2e6',
+              primary: '#8ed5ff',
+              'on-primary': '#00354a',
+              outline: '#87929a',
+              'surface-container': '#122131',
+              'tertiary-fixed': '#6ffbbe',
+              'on-secondary-container': '#00344e',
+              'on-primary-container': '#004965',
+              'on-background': '#d4e4fa',
+              'error-container': '#93000a',
+              error: '#ffb4ab',
+              'on-primary-fixed-variant': '#004c69',
+              'on-error-container': '#ffdad6',
+              'on-primary-fixed': '#001e2c',
+              'inverse-on-surface': '#233143',
+              'inverse-surface': '#d4e4fa',
+              secondary: '#89ceff',
+              'on-surface': '#d4e4fa',
+              'on-secondary-fixed-variant': '#004c6e',
+              'on-secondary': '#00344d',
+              'surface-tint': '#7bd0ff',
+              'outline-variant': '#3e484f',
+              'tertiary-container': '#30c88f',
+              'primary-fixed': '#c4e7ff',
+              tertiary: '#56e5a9',
+              'on-error': '#690005',
+              'on-secondary-fixed': '#001e2f',
+              'primary-container': '#38bdf8',
+              'on-tertiary': '#003824',
+              'on-tertiary-fixed': '#002113',
+              'surface-container-high': '#1c2b3c',
+            },
+            borderRadius: {
+              DEFAULT: '0.125rem',
+              lg: '0.25rem',
+              xl: '0.5rem',
+              full: '0.75rem',
+            },
+            spacing: {
+              'margin-lg': '5rem',
+              'margin-md': '3rem',
+              'space-md': '1rem',
+              margin: '1.5rem',
+              'space-lg': '1.5rem',
+              'gutter-sm': '1rem',
+              'space-xs': '0.25rem',
+              'gutter-lg': '2rem',
+              'space-sm': '0.5rem',
+              'space-xl': '2.5rem',
+              gutter: '1.5rem',
+            },
+            fontFamily: {
+              'body-sm': ['Inter'],
+              'headline-lg': ['Inter'],
+              'code-md': ['JetBrains Mono'],
+              'display-xl': ['Inter'],
+              'label-mono': ['JetBrains Mono'],
+              'body-lg': ['Inter'],
+              'headline-md': ['Inter'],
+              'headline-sm': ['Inter'],
+              'body-md': ['Inter'],
+              'code-sm': ['JetBrains Mono'],
+              'display-xl-mobile': ['Inter'],
+              'headline-lg-mobile': ['Inter'],
+            },
+            fontSize: {
+              'body-sm': [
+                '13px',
+                { lineHeight: '20px', letterSpacing: '0', fontWeight: '400' },
+              ],
+              'headline-lg': [
+                '32px',
+                {
+                  lineHeight: '40px',
+                  letterSpacing: '-0.02em',
+                  fontWeight: '700',
+                },
+              ],
+              'code-md': [
+                '14px',
+                {
+                  lineHeight: '22px',
+                  letterSpacing: '-0.01em',
+                  fontWeight: '500',
+                },
+              ],
+              'display-xl': [
+                '56px',
+                {
+                  lineHeight: '64px',
+                  letterSpacing: '-0.03em',
+                  fontWeight: '800',
+                },
+              ],
+              'label-mono': [
+                '11px',
+                {
+                  lineHeight: '16px',
+                  letterSpacing: '0.06em',
+                  fontWeight: '600',
+                },
+              ],
+              'body-lg': [
+                '18px',
+                {
+                  lineHeight: '28px',
+                  letterSpacing: '-0.005em',
+                  fontWeight: '400',
+                },
+              ],
+              'headline-md': [
+                '24px',
+                {
+                  lineHeight: '32px',
+                  letterSpacing: '-0.015em',
+                  fontWeight: '600',
+                },
+              ],
+              'headline-sm': [
+                '20px',
+                {
+                  lineHeight: '28px',
+                  letterSpacing: '-0.01em',
+                  fontWeight: '600',
+                },
+              ],
+              'body-md': [
+                '15px',
+                { lineHeight: '24px', letterSpacing: '0', fontWeight: '400' },
+              ],
+              'code-sm': [
+                '12px',
+                { lineHeight: '18px', letterSpacing: '0', fontWeight: '400' },
+              ],
+              'display-xl-mobile': [
+                '36px',
+                {
+                  lineHeight: '44px',
+                  letterSpacing: '-0.025em',
+                  fontWeight: '800',
+                },
+              ],
+              'headline-lg-mobile': [
+                '26px',
+                {
+                  lineHeight: '34px',
+                  letterSpacing: '-0.015em',
+                  fontWeight: '700',
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"
+  >
+    <header
+      class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"
+    >
+      <div
+        class="h-16 max-w-[1280px] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex items-center justify-between gap-space-md"
+      >
+        <div class="flex items-center gap-space-sm">
+          <img
+            alt="VLC Tech Logo"
+            class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1X6aZ3xkRFyuM8_MkvuMiCeSBjyd2QO0OxWdala7WmwL0cHFKLmkd1Qtl7h3SGU32yYwVHvc7z4Z3fxo0L3988vzdFRjCaZqoldHwnkZDhradpfJdVbY7V0c6Tj2LSoxqk-n0-lOn3VF-H7lkcjtRdxDXeQiKsOClhcNTkCOQUy2hzMF6OURd0kucJgTMvSxxFd9sJZFZlcglf_qNNs2DzM7-uLnRYsBol8J462P8VXAg"
+          /><span
+            class="font-code-md text-code-md text-primary font-medium tracking-tight"
+            >{ VLC }</span
+          ><span
+            class="hidden xl:inline-block font-label-mono text-label-mono text-outline uppercase tracking-wider pl-space-xs"
+            >/ Víctor E. León Carreño</span
+          >
+        </div>
+        <nav
+          class="hidden md:flex items-center gap-space-sm"
+          data-active-classes="bg-surface-container-high text-primary font-medium rounded-lg"
+        >
+          <a
+            aria-current="page"
+            class="px-space-sm py-space-xs transition-all bg-surface-container-high text-primary font-medium rounded-lg"
+            data-path="about"
+            href="#"
+            >About</a
+          ><a
+            class="px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-body-sm text-body-sm"
+            data-path="experience"
+            href="#"
+            >Experience</a
+          ><a
+            class="px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-body-sm text-body-sm"
+            data-path="projects"
+            href="#"
+            >Projects</a
+          ><a
+            class="px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-body-sm text-body-sm"
+            data-path="skills"
+            href="#"
+            >Skills</a
+          ><a
+            class="px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-body-sm text-body-sm"
+            data-path="contact"
+            href="#"
+            >Contact</a
+          >
+        </nav>
+        <div class="flex items-center gap-space-sm">
+          <div
+            class="hidden sm:flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-low"
+          >
+            <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span
+            ><span
+              class="font-label-mono text-label-mono text-tertiary uppercase"
+              >Available for Hire</span
+            >
+          </div>
+          <button
+            aria-label="Toggle color mode"
+            class="p-space-xs rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors flex items-center justify-center"
+            type="button"
+          >
+            <span class="material-symbols-outlined text-[18px]">dark_mode</span>
+          </button>
+          <div
+            class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"
+          >
+            <span class="material-symbols-outlined text-on-primary text-[18px]"
+              >person</span
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="w-full pt-16 bg-surface min-h-screen">
+      <div class="flex flex-col w-full">
+        <!-- Top Ambient Glow Field -->
+        <div class="relative w-full overflow-hidden">
+          <div
+            class="absolute -top-40 left-1/2 -translate-x-1/2 w-[720px] h-[360px] bg-gradient-to-b from-primary/10 via-primary-container/5 to-transparent blur-3xl pointer-events-none rounded-full"
+          ></div>
+          <!-- 1. Hero Section -->
+          <section
+            class="relative max-w-[1280px] w-full mx-auto px-margin md:px-margin-md lg:px-margin-lg pt-space-xl pb-space-xl"
+          >
+            <!-- Breadcrumb / Status Telemetry Bar -->
+            <div
+              class="flex flex-wrap items-center justify-between gap-space-sm mb-space-lg"
+            >
+              <div
+                class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-low shadow-sm"
+              >
+                <span
+                  class="w-2 h-2 rounded-full bg-tertiary animate-pulse"
+                ></span>
+                <span
+                  class="font-label-mono text-label-mono text-tertiary uppercase tracking-wider"
+                  >Available for select senior roles & advisory</span
+                >
+              </div>
+              <div
+                class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-low shadow-sm"
+              >
+                <span class="material-symbols-outlined text-[14px] text-primary"
+                  >bolt</span
+                >
+                <span
+                  class="font-label-mono text-label-mono text-on-surface-variant uppercase tracking-wider"
+                  >99.8% Lighthouse Standard</span
+                >
+              </div>
+            </div>
+            <!-- Main Headline Grid -->
+            <div
+              class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center"
+            >
+              <div class="lg:col-span-7 flex flex-col gap-space-md">
+                <div
+                  class="font-label-mono text-label-mono text-primary uppercase tracking-widest flex items-center gap-space-xs"
+                >
+                  <span class="material-symbols-outlined text-[16px]"
+                    >terminal</span
+                  >
+                  <span>SYSTEM ARCHITECT • VUE 3 SPECIALIST</span>
+                </div>
+                <h1
+                  class="font-display-xl text-display-xl tracking-tight text-on-surface"
+                >
+                  Víctor Eduardo<br />
+                  <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-container to-secondary"
+                    >León Carreño</span
+                  >
+                </h1>
+                <p
+                  class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed"
+                >
+                  Senior Frontend Engineer specializing in Vue 3, TypeScript,
+                  and enterprise-grade frontend architecture. 6+ years
+                  transforming complex web applications into performant,
+                  scalable digital experiences with zero technical debt.
+                </p>
+                <!-- CTAs -->
+                <div
+                  class="flex flex-wrap items-center gap-space-sm pt-space-xs"
+                >
+                  <a
+                    class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-gradient-to-r from-primary-container to-secondary-container text-on-primary font-code-md text-code-md font-semibold shadow-lg hover:shadow-primary/20 hover:scale-[1.02] transition-all"
+                    href="#projects"
+                  >
+                    <span>Explore Projects</span>
+                    <span class="material-symbols-outlined text-[18px]"
+                      >arrow_downward</span
+                    >
+                  </a>
+                  <a
+                    class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-high text-on-surface hover:text-primary font-code-md text-code-md transition-all shadow-sm"
+                    href="#contact"
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >send</span
+                    >
+                    <span>Get in Touch</span>
+                  </a>
+                  <button
+                    class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container text-on-surface-variant hover:text-primary font-code-md text-code-md transition-colors"
+                    onclick="
+                      navigator.clipboard.writeText(
+                        'victor.leon.carreno@gmail.com',
+                      );
+                      alert(
+                        'Email copied to clipboard: victor.leon.carreno@gmail.com',
+                      );
+                    "
+                  >
+                    <span class="material-symbols-outlined text-[18px]"
+                      >content_copy</span
+                    >
+                    <span>Copy Direct Email</span>
+                  </button>
+                </div>
+              </div>
+              <!-- Hero Interactive Architectural Terminal Card -->
+              <div class="lg:col-span-5 w-full">
+                <div
+                  class="rounded-xl bg-surface-container-low shadow-xl p-space-md flex flex-col gap-space-sm backdrop-blur-md"
+                >
+                  <!-- Window header -->
+                  <div class="flex items-center justify-between pb-space-xs">
+                    <div class="flex items-center gap-space-xs">
+                      <span
+                        class="w-3 h-3 rounded-full bg-error-container"
+                      ></span>
+                      <span
+                        class="w-3 h-3 rounded-full bg-surface-container-highest"
+                      ></span>
+                      <span
+                        class="w-3 h-3 rounded-full bg-tertiary-container"
+                      ></span>
+                      <span
+                        class="font-code-sm text-code-sm text-outline ml-space-xs"
+                        >runtime_diagnostics.ts</span
+                      >
+                    </div>
+                    <span class="font-label-mono text-label-mono text-tertiary"
+                      >STABLE 100ms</span
+                    >
+                  </div>
+                  <!-- Monospace Code Terminal -->
+                  <div
+                    class="bg-surface-container-lowest rounded-lg p-space-sm font-code-sm text-code-sm flex flex-col gap-space-xs text-on-surface-variant overflow-x-auto"
+                  >
+                    <div class="flex items-center gap-space-xs text-outline">
+                      <span>01</span>
+                      <span class="text-primary">import</span>
+                      <span>{ defineEnterpriseStack }</span>
+                      <span class="text-primary">from</span>
+                      <span class="text-tertiary">'@vlc/core'</span>;
+                    </div>
+                    <div class="flex items-center gap-space-xs text-outline">
+                      <span>02</span>
+                      <span class="text-primary">export const</span>
+                      <span class="text-secondary">architectProfile</span> =
+                      <span class="text-primary">defineEnterpriseStack</span>({
+                    </div>
+                    <div
+                      class="flex items-center gap-space-xs text-outline pl-space-sm"
+                    >
+                      <span>03</span>
+                      <span class="text-on-surface">specialization:</span>
+                      <span class="text-tertiary"
+                        >'Vue 3 Composition API & Pinia'</span
+                      >,
+                    </div>
+                    <div
+                      class="flex items-center gap-space-xs text-outline pl-space-sm"
+                    >
+                      <span>04</span>
+                      <span class="text-on-surface">latencyThreshold:</span>
+                      <span class="text-secondary-fixed">< 100</span>,
+                      <span class="text-outline"
+                        >// ms across global edges</span
+                      >
+                    </div>
+                    <div
+                      class="flex items-center gap-space-xs text-outline pl-space-sm"
+                    >
+                      <span>05</span>
+                      <span class="text-on-surface">bundleBudget:</span>
+                      <span class="text-tertiary"
+                        >'Strict < 45kb gzip per chunk'</span
+                      >,
+                    </div>
+                    <div
+                      class="flex items-center gap-space-xs text-outline pl-space-sm"
+                    >
+                      <span>06</span>
+                      <span class="text-on-surface">typeIntegrity:</span>
+                      <span class="text-tertiary">'Strict TypeScript 100%'</span
+                      >,
+                    </div>
+                    <div
+                      class="flex items-center gap-space-xs text-outline pl-space-sm"
+                    >
+                      <span>07</span>
+                      <span class="text-on-surface">status:</span>
+                      <span class="text-tertiary-fixed"
+                        >'Production Ready & High Scale'</span
+                      >
+                    </div>
+                    <div class="flex items-center gap-space-xs text-outline">
+                      <span>08</span>
+                      });
+                    </div>
+                  </div>
+                  <!-- Terminal telemetry bar -->
+                  <div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+                    <div
+                      class="p-space-xs rounded bg-surface-container flex flex-col"
+                    >
+                      <span
+                        class="font-label-mono text-label-mono text-outline uppercase"
+                        >Core Web Vitals</span
+                      >
+                      <span
+                        class="font-code-md text-code-md text-tertiary font-semibold"
+                        >100 / 100 Green</span
+                      >
+                    </div>
+                    <div
+                      class="p-space-xs rounded bg-surface-container flex flex-col"
+                    >
+                      <span
+                        class="font-label-mono text-label-mono text-outline uppercase"
+                        >Micro-Frontend Sync</span
+                      >
+                      <span
+                        class="font-code-md text-code-md text-primary font-semibold"
+                        >45+ federated nodes</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Engineering Stats Ribbon -->
+            <div
+              class="mt-space-xl grid grid-cols-2 md:grid-cols-4 gap-gutter-sm"
+            >
+              <div
+                class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-space-xs relative overflow-hidden group hover:bg-surface-container transition-all"
+              >
+                <div
+                  class="absolute top-0 right-0 p-space-xs text-outline-variant font-code-sm text-code-sm"
+                >
+                  +
+                </div>
+                <span
+                  class="font-label-mono text-label-mono text-outline uppercase tracking-wider"
+                  >Career Cadence</span
+                >
+                <span
+                  class="font-headline-lg text-headline-lg text-primary tabular-nums font-bold"
+                  >6+ Years</span
+                >
+                <span class="font-body-sm text-body-sm text-on-surface-variant"
+                  >Production system leadership</span
+                >
+              </div>
+              <div
+                class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-space-xs relative overflow-hidden group hover:bg-surface-container transition-all"
+              >
+                <div
+                  class="absolute top-0 right-0 p-space-xs text-outline-variant font-code-sm text-code-sm"
+                >
+                  +
+                </div>
+                <span
+                  class="font-label-mono text-label-mono text-outline uppercase tracking-wider"
+                  >Shipment Velocity</span
+                >
+                <span
+                  class="font-headline-lg text-headline-lg text-secondary tabular-nums font-bold"
+                  >15+ Releases</span
+                >
+                <span class="font-body-sm text-body-sm text-on-surface-variant"
+                  >Enterprise software rollouts</span
+                >
+              </div>
+              <div
+                class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-space-xs relative overflow-hidden group hover:bg-surface-container transition-all"
+              >
+                <div
+                  class="absolute top-0 right-0 p-space-xs text-outline-variant font-code-sm text-code-sm"
+                >
+                  +
+                </div>
+                <span
+                  class="font-label-mono text-label-mono text-outline uppercase tracking-wider"
+                  >Data Pipeline</span
+                >
+                <span
+                  class="font-headline-lg text-headline-lg text-tertiary tabular-nums font-bold"
+                  >75% Cut</span
+                >
+                <span class="font-body-sm text-body-sm text-on-surface-variant"
+                  >PostgreSQL query latency drop</span
+                >
+              </div>
+              <div
+                class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-space-xs relative overflow-hidden group hover:bg-surface-container transition-all"
+              >
+                <div
+                  class="absolute top-0 right-0 p-space-xs text-outline-variant font-code-sm text-code-sm"
+                >
+                  +
+                </div>
+                <span
+                  class="font-label-mono text-label-mono text-outline uppercase tracking-wider"
+                  >Type Correctness</span
+                >
+                <span
+                  class="font-headline-lg text-headline-lg text-primary tabular-nums font-bold"
+                  >100%</span
+                >
+                <span class="font-body-sm text-body-sm text-on-surface-variant"
+                  >End-to-end safe architecture</span
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- 2. Career Experience Timeline -->
+        <section
+          class="w-full bg-surface-container-lowest py-space-xl"
+          id="experience"
+        >
+          <div
+            class="max-w-[1280px] w-full mx-auto px-margin md:px-margin-md lg:px-margin-lg flex flex-col gap-space-lg"
+          >
+            <!-- Section Header -->
+            <div
+              class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm"
+            >
+              <div class="flex flex-col gap-space-xs">
+                <div
+                  class="flex items-center gap-space-xs font-label-mono text-label-mono text-primary uppercase tracking-widest"
+                >
+                  <span class="material-symbols-outlined text-[16px]"
+                    >history_edu</span
+                  >
+                  <span>CHRONOLOGY • TRACK RECORD</span>
+                </div>
+                <h2
+                  class="font-headline-lg text-headline-lg text-on-surface font-bold"
+                >
+                  Architectural Journey & Impact
+                </h2>
+                <p
+                  class="font-body-md text-body-md text-on-surface-variant max-w-xl"
+                >
+                  Senior engineering roles focused on measurable performance
+                  gains, decoupled micro-frontends, and clean technical
+                  architecture.
+                </p>
+              </div>
+              <div
+                class="font-label-mono text-label-mono text-outline uppercase"
+              >
+                [ 2018 — PRESENT ]
+              </div>
+            </div>
+            <!-- Timeline Rail Grid -->
+            <div class="grid grid-cols-1 gap-gutter-md relative">
+              <!-- Vertical connector line indicator -->
+              <div
+                class="hidden md:block absolute left-8 top-8 bottom-8 w-px bg-surface-container-highest"
+              ></div>
+              <!-- Role 1 -->
+              <div class="relative md:pl-20 flex flex-col gap-space-xs">
+                <div
+                  class="hidden md:flex absolute left-6 top-6 -translate-x-1/2 w-5 h-5 rounded-full bg-surface-container-low items-center justify-center shadow-md"
+                >
+                  <span
+                    class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"
+                  ></span>
+                </div>
+                <div
+                  class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-space-md hover:bg-surface-container transition-all"
+                >
+                  <div
+                    class="flex flex-col md:flex-row md:items-center justify-between gap-space-xs"
+                  >
+                    <div class="flex flex-col">
+                      <div class="flex items-center gap-space-xs">
+                        <span
+                          class="font-headline-md text-headline-md text-on-surface font-semibold"
+                          >Lead Frontend Architect</span
+                        >
+                        <span
+                          class="px-space-xs py-0.5 rounded font-label-mono text-label-mono bg-primary/10 text-primary uppercase"
+                          >Current</span
+                        >
+                      </div>
+                      <span
+                        class="font-code-md text-code-md text-primary font-medium"
+                        >Enterprise Cloud Scale Solutions</span
+                      >
+                    </div>
+                    <div class="font-label-mono text-label-mono text-outline">
+                      2022 — PRESENT • FULL-TIME
+                    </div>
+                  </div>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                  >
+                    Spearheaded the enterprise-wide transition from legacy Vue 2
+                    Options API to modern Vue 3 Composition API and Pinia across
+                    45+ isolated micro-frontends. Engineered unified runtime
+                    schemas, automated bundle analyzers, and zero-downtime
+                    canary deployment pipelines.
+                  </p>
+                  <div
+                    class="flex flex-wrap items-center gap-space-sm pt-space-xs"
+                  >
+                    <div
+                      class="px-space-sm py-space-xs rounded bg-surface-container-high flex items-center gap-space-xs"
+                    >
+                      <span
+                        class="material-symbols-outlined text-[16px] text-tertiary"
+                        >trending_down</span
+                      >
+                      <span
+                        class="font-code-sm text-code-sm text-tertiary font-medium"
+                        >40% bundle size reduction</span
+                      >
+                    </div>
+                    <div
+                      class="px-space-sm py-space-xs rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                    >
+                      Vue 3 Composition API
+                    </div>
+                    <div
+                      class="px-space-sm py-space-xs rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                    >
+                      Pinia
+                    </div>
+                    <div
+                      class="px-space-sm py-space-xs rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                    >
+                      Vite Module Federation
+                    </div>
+                    <div
+                      class="px-space-sm py-space-xs rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                    >
+                      TypeScript
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Role 2 -->
+              <div class="relative md:pl-20 flex flex-col gap-space-xs">
+                <div
+                  class="hidden md:flex absolute left-6 top-6 -translate-x-1/2 w-5 h-5 rounded-full bg-surface-container-low items-center justify-center shadow-md"
+                >
+                  <span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+                </div>
+                <div
+                  class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-space-md hover:bg-surface-container transition-all"
+                >
+                  <div
+                    class="flex flex-col md:flex-row md:items-center justify-between gap-space-xs"
+                  >
+                    <div class="flex flex-col">
+                      <div class="flex items-center gap-space-xs">
+                        <span
+                          class="font-headline-md text-headline-md text-on-surface font-semibold"
+                          >Senior Fullstack & Frontend Engineer</span
+                        >
+                      </div>
+                      <span
+                        class="font-code-md text-code-md text-secondary font-medium"
+                        >FinTech & Distributed Commerce</span
+                      >
+                    </div>
+                    <div class="font-label-mono text-label-mono text-outline">
+                      2020 — 2022 • FULL-TIME
+                    </div>
+                  </div>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                  >
+                    Architected high-throughput transactional flows linking
+                    heavy frontend state stores to Node.js microservices and
+                    complex relational tables. Refactored composite queries,
+                    established Redis multi-tier caching, and integrated strict
+                    Vitest and Cypress suites achieving 92% automated test
+                    coverage.
+                  </p>
+                  <div
+                    class="flex flex-wrap items-center gap-space-sm pt-space-xs"
+                  >
+                    <div
+                      class="px-space-sm py-space-xs rounded bg-surface-container-high flex items-center gap-space-xs"
+                    >
+                      <span
+                        class="material-symbols-outlined text-[16px] text-tertiary"
+                        >speed</span
+                      >
+                      <span
+                        class="font-code-sm text-code-sm text-tertiary font-medium"
+                        >75% reduction in PostgreSQL query latency</span
+                      >
+                    </div>
+                    <div
+                      class="px-space-sm py-space-xs rounded bg-surface-container-high flex items-center gap-space-xs"
+                    >
+                      <span
+                        class="material-symbols-outlined text-[16px] text-primary"
+                        >verified</span
+                      >
+                      <span
+                        class="font-code-sm text-code-sm text-primary font-medium"
+                        >92% code coverage</span
+                      >
+                    </div>
+                    <div
+                      class="px-space-sm py-space-xs rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                    >
+                      Node.js
+                    </div>
+                    <div
+                      class="px-space-sm py-space-xs rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                    >
+                      PostgreSQL
+                    </div>
+                    <div
+                      class="px-space-sm py-space-xs rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                    >
+                      Vitest
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Role 3 -->
+              <div class="relative md:pl-20 flex flex-col gap-space-xs">
+                <div
+                  class="hidden md:flex absolute left-6 top-6 -translate-x-1/2 w-5 h-5 rounded-full bg-surface-container-low items-center justify-center shadow-md"
+                >
+                  <span class="w-2.5 h-2.5 rounded-full bg-outline"></span>
+                </div>
+                <div
+                  class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col gap-space-md hover:bg-surface-container transition-all"
+                >
+                  <div
+                    class="flex flex-col md:flex-row md:items-center justify-between gap-space-xs"
+                  >
+                    <div class="flex flex-col">
+                      <div class="flex items-center gap-space-xs">
+                        <span
+                          class="font-headline-md text-headline-md text-on-surface font-semibold"
+                          >Frontend Systems Engineer</span
+                        >
+                      </div>
+                      <span
+                        class="font-code-md text-code-md text-on-surface-variant font-medium"
+                        >Interactive Consumer Platform</span
+                      >
+                    </div>
+                    <div class="font-label-mono text-label-mono text-outline">
+                      2018 — 2020 • FULL-TIME
+                    </div>
+                  </div>
+                  <p
+                    class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                  >
+                    Engineered modular design token systems and cross-browser
+                    rendering pipelines supporting 500k+ monthly active users.
+                    Reduced cumulative layout shift (CLS) to near zero and
+                    optimized asset delivery networks for low-bandwidth mobile
+                    environments.
+                  </p>
+                  <div
+                    class="flex flex-wrap items-center gap-space-sm pt-space-xs"
+                  >
+                    <div
+                      class="px-space-sm py-space-xs rounded bg-surface-container-high flex items-center gap-space-xs"
+                    >
+                      <span
+                        class="material-symbols-outlined text-[16px] text-primary"
+                        >groups</span
+                      >
+                      <span
+                        class="font-code-sm text-code-sm text-primary font-medium"
+                        >500k+ Monthly Active Users</span
+                      >
+                    </div>
+                    <div
+                      class="px-space-sm py-space-xs rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                    >
+                      JavaScript ES6+
+                    </div>
+                    <div
+                      class="px-space-sm py-space-xs rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                    >
+                      Design Tokens
+                    </div>
+                    <div
+                      class="px-space-sm py-space-xs rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                    >
+                      Webpack 4 → 5
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 3. Featured Projects Grid -->
+        <section class="w-full py-space-xl" id="projects">
+          <div
+            class="max-w-[1280px] w-full mx-auto px-margin md:px-margin-md lg:px-margin-lg flex flex-col gap-space-lg"
+          >
+            <!-- Section Header -->
+            <div
+              class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm"
+            >
+              <div class="flex flex-col gap-space-xs">
+                <div
+                  class="flex items-center gap-space-xs font-label-mono text-label-mono text-primary uppercase tracking-widest"
+                >
+                  <span class="material-symbols-outlined text-[16px]"
+                    >folder_special</span
+                  >
+                  <span>PRODUCTION ARTIFACTS</span>
+                </div>
+                <h2
+                  class="font-headline-lg text-headline-lg text-on-surface font-bold"
+                >
+                  Featured Projects & Systems
+                </h2>
+                <p
+                  class="font-body-md text-body-md text-on-surface-variant max-w-xl"
+                >
+                  Selected real-world architectures engineered for extreme
+                  latency thresholds, bulletproof state synchronization, and
+                  component resilience.
+                </p>
+              </div>
+              <div
+                class="flex items-center gap-space-xs font-code-sm text-code-sm text-outline"
+              >
+                <span>Displaying 3 core systems</span>
+              </div>
+            </div>
+            <!-- Project Cards Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter-lg">
+              <!-- Card 1: Koonol -->
+              <div
+                class="flex flex-col rounded-xl bg-surface-container-low overflow-hidden shadow-lg hover:shadow-primary/10 transition-all group"
+              >
+                <!-- Rich Graphic Preview Card -->
+                <div
+                  class="relative w-full h-48 bg-surface-container-high overflow-hidden flex items-center justify-center p-space-md"
+                >
+                  <img
+                    class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500 opacity-80"
+                    data-alt="Dark aesthetic user interface dashboard for Koonol enterprise point of sale and SaaS platform, glowing cyan and emerald metric graphs, real-time inventory tables, clean dark blue workspace, cinematic angle."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCry0AILb1qp9cbNWGZq8kTnZJVi4Fn5CGCRCMgbdgHomK2dShV9AhAbPbrg-2CbLOQ4MrzQk2HkoC_eXKtPNyPwBC4lXbausJy3usZGna7JkAk5QaYKbDkw5gpZZsNwx0IsFzj_xKWuXl5aXTYdWoG6Pc-omnti_8gZR5MiRfJenmV50WzS0V8PN_FLFIn5y60M9Ld7HMrG6NAiiNK7vG_qStc8LdYGnm4w4WFq9O4"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"
+                  ></div>
+                  <div
+                    class="absolute top-3 left-3 px-space-xs py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur font-label-mono text-label-mono text-primary"
+                  >
+                    ENTERPRISE SAAS / POS
+                  </div>
+                  <div
+                    class="absolute bottom-3 right-3 px-space-xs py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-mono text-label-mono flex items-center gap-space-xs"
+                  >
+                    <span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                    <span>OFFLINE FIRST</span>
+                  </div>
+                </div>
+                <div
+                  class="p-space-lg flex flex-col justify-between flex-1 gap-space-md"
+                >
+                  <div class="flex flex-col gap-space-xs">
+                    <h3
+                      class="font-headline-md text-headline-md text-on-surface font-bold group-hover:text-primary transition-colors"
+                    >
+                      Koonol
+                    </h3>
+                    <p
+                      class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                    >
+                      Multi-tenant cloud Point of Sale and inventory platform
+                      architected for offline-first reliability and sub-100ms
+                      checkout latency under heavy enterprise network
+                      congestion.
+                    </p>
+                  </div>
+                  <!-- Key Metrics -->
+                  <div
+                    class="grid grid-cols-3 gap-space-xs py-space-xs bg-surface-container rounded-lg px-space-sm"
+                  >
+                    <div class="flex flex-col">
+                      <span class="font-label-mono text-label-mono text-outline"
+                        >< 100ms</span
+                      >
+                      <span
+                        class="font-code-sm text-code-sm text-on-surface font-semibold"
+                        >Sync latency</span
+                      >
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="font-label-mono text-label-mono text-outline"
+                        >99.98%</span
+                      >
+                      <span
+                        class="font-code-sm text-code-sm text-tertiary font-semibold"
+                        >Uptime</span
+                      >
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="font-label-mono text-label-mono text-outline"
+                        >$12M+</span
+                      >
+                      <span
+                        class="font-code-sm text-code-sm text-primary font-semibold"
+                        >Processed</span
+                      >
+                    </div>
+                  </div>
+                  <!-- Tech Badges -->
+                  <div class="flex flex-wrap gap-1.5">
+                    <span
+                      class="px-space-xs py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                      >Vue 3</span
+                    >
+                    <span
+                      class="px-space-xs py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                      >TypeScript</span
+                    >
+                    <span
+                      class="px-space-xs py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                      >Pinia</span
+                    >
+                    <span
+                      class="px-space-xs py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                      >WebSockets</span
+                    >
+                    <span
+                      class="px-space-xs py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                      >PostgreSQL</span
+                    >
+                  </div>
+                  <!-- Action Links -->
+                  <div class="flex items-center gap-space-sm pt-space-xs">
+                    <a
+                      class="flex-1 inline-flex items-center justify-center gap-space-xs py-space-xs px-space-sm rounded-lg bg-primary-container text-on-primary font-code-sm text-code-sm font-semibold hover:bg-primary transition-colors"
+                      href="#"
+                    >
+                      <span class="material-symbols-outlined text-[16px]"
+                        >visibility</span
+                      >
+                      <span>Live Demo</span>
+                    </a>
+                    <a
+                      class="inline-flex items-center justify-center gap-space-xs p-space-xs rounded-lg bg-surface-container text-on-surface hover:text-primary transition-colors"
+                      href="#"
+                    >
+                      <span class="material-symbols-outlined text-[20px]"
+                        >code</span
+                      >
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 2: Kuxtal -->
+              <div
+                class="flex flex-col rounded-xl bg-surface-container-low overflow-hidden shadow-lg hover:shadow-primary/10 transition-all group"
+              >
+                <!-- Rich Graphic Preview Card -->
+                <div
+                  class="relative w-full h-48 bg-surface-container-high overflow-hidden flex items-center justify-center p-space-md"
+                >
+                  <img
+                    class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500 opacity-80"
+                    data-alt="Modular design system components showcase in dark mode, showing buttons, sliders, data tables, color tokens, and accessibility tree diagrams in crisp cyan and slate tones, high resolution."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuATQObUxzi7JGFfJarOMT3pASeTdF7-HheTn_yKmBkOCD0HIIhu0Gus0JL194cjU5fB-xNMQFuLUCHMxQGOAmCpmX_9G-mciWgYMV-1mguQFpewGN4njRdnCS-UP4gzgiAUDeBmqwyKgBGYEB8WHIyuoDE9DfjuUxRfmWbOPeBRdqbKJG7n8ApLxbnbTNiBZYMI2WXGt1fJFca-18bvp0SeNdLWILCn678OHG4-fiu4"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"
+                  ></div>
+                  <div
+                    class="absolute top-3 left-3 px-space-xs py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur font-label-mono text-label-mono text-secondary"
+                  >
+                    DESIGN SYSTEM • UI LIB
+                  </div>
+                  <div
+                    class="absolute bottom-3 right-3 px-space-xs py-0.5 rounded bg-primary-container/30 text-primary font-label-mono text-label-mono flex items-center gap-space-xs"
+                  >
+                    <span class="material-symbols-outlined text-[14px]"
+                      >accessibility_new</span
+                    >
+                    <span>WCAG AAA</span>
+                  </div>
+                </div>
+                <div
+                  class="p-space-lg flex flex-col justify-between flex-1 gap-space-md"
+                >
+                  <div class="flex flex-col gap-space-xs">
+                    <h3
+                      class="font-headline-md text-headline-md text-on-surface font-bold group-hover:text-primary transition-colors"
+                    >
+                      Kuxtal
+                    </h3>
+                    <p
+                      class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                    >
+                      Production-grade Vue 3 UI component library. Highly
+                      accessible, headless-first design system primitives with
+                      automated WCAG AAA compliance, custom composables, and
+                      zero bundle bloat.
+                    </p>
+                  </div>
+                  <!-- Key Metrics -->
+                  <div
+                    class="grid grid-cols-3 gap-space-xs py-space-xs bg-surface-container rounded-lg px-space-sm"
+                  >
+                    <div class="flex flex-col">
+                      <span class="font-label-mono text-label-mono text-outline"
+                        >2.4kb</span
+                      >
+                      <span
+                        class="font-code-sm text-code-sm text-tertiary font-semibold"
+                        >Gzipped Core</span
+                      >
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="font-label-mono text-label-mono text-outline"
+                        >100%</span
+                      >
+                      <span
+                        class="font-code-sm text-code-sm text-primary font-semibold"
+                        >TS Coverage</span
+                      >
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="font-label-mono text-label-mono text-outline"
+                        >45+</span
+                      >
+                      <span
+                        class="font-code-sm text-code-sm text-on-surface font-semibold"
+                        >Primitives</span
+                      >
+                    </div>
+                  </div>
+                  <!-- Tech Badges -->
+                  <div class="flex flex-wrap gap-1.5">
+                    <span
+                      class="px-space-xs py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                      >Vue 3</span
+                    >
+                    <span
+                      class="px-space-xs py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                      >Vite</span
+                    >
+                    <span
+                      class="px-space-xs py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                      >Storybook</span
+                    >
+                    <span
+                      class="px-space-xs py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                      >Tailwind</span
+                    >
+                    <span
+                      class="px-space-xs py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                      >Vitest</span
+                    >
+                  </div>
+                  <!-- Action Links -->
+                  <div class="flex items-center gap-space-sm pt-space-xs">
+                    <a
+                      class="flex-1 inline-flex items-center justify-center gap-space-xs py-space-xs px-space-sm rounded-lg bg-surface-container-high text-on-surface font-code-sm text-code-sm font-semibold hover:text-primary transition-colors"
+                      href="#"
+                    >
+                      <span class="material-symbols-outlined text-[16px]"
+                        >menu_book</span
+                      >
+                      <span>Docs & Storybook</span>
+                    </a>
+                    <a
+                      class="inline-flex items-center justify-center gap-space-xs p-space-xs rounded-lg bg-surface-container text-on-surface hover:text-primary transition-colors"
+                      href="#"
+                    >
+                      <span class="material-symbols-outlined text-[20px]"
+                        >code</span
+                      >
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Card 3: ApexPulse -->
+              <div
+                class="flex flex-col rounded-xl bg-surface-container-low overflow-hidden shadow-lg hover:shadow-primary/10 transition-all group"
+              >
+                <!-- Rich Graphic Preview Card -->
+                <div
+                  class="relative w-full h-48 bg-surface-container-high overflow-hidden flex items-center justify-center p-space-md"
+                >
+                  <img
+                    class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500 opacity-80"
+                    data-alt="High performance streaming telemetry interface with glowing oscilloscope waves, real-time node network topology in electric cyan and neon green, high FPS analytics dashboard, dark background."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVjBd5fkOFHko6WOKm-5AYthd9XSZbHyrc4ZMPUipg-h55pcsxOordu-93bdEDUdq3barn4wgeozXmPA9liJeuzpYl_MSWWna76Z-s2PORvQdD-_tbKAcrYGMESOv7hh3Div-cXDk88LxRjFA6vtSv6iV5kjQ9_3larO12jJooKqFyclTQqBzbtUEuS5iMrs5GVw67JdygWUmb6fa1tM8-xEAqK4tpFp-FI1zVS1BM"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"
+                  ></div>
+                  <div
+                    class="absolute top-3 left-3 px-space-xs py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur font-label-mono text-label-mono text-tertiary"
+                  >
+                    STREAMING TELEMETRY
+                  </div>
+                  <div
+                    class="absolute bottom-3 right-3 px-space-xs py-0.5 rounded bg-surface-container-lowest/90 text-primary font-label-mono text-label-mono flex items-center gap-space-xs"
+                  >
+                    <span class="material-symbols-outlined text-[14px]"
+                      >speed</span
+                    >
+                    <span>60 FPS SMOOTH</span>
+                  </div>
+                </div>
+                <div
+                  class="p-space-lg flex flex-col justify-between flex-1 gap-space-md"
+                >
+                  <div class="flex flex-col gap-space-xs">
+                    <h3
+                      class="font-headline-md text-headline-md text-on-surface font-bold group-hover:text-primary transition-colors"
+                    >
+                      ApexPulse
+                    </h3>
+                    <p
+                      class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                    >
+                      Distributed monitoring cockpit rendering real-time
+                      streaming WebGL visual analytics, concurrent Web Worker
+                      data transformations, and zero UI thread blocking.
+                    </p>
+                  </div>
+                  <!-- Key Metrics -->
+                  <div
+                    class="grid grid-cols-3 gap-space-xs py-space-xs bg-surface-container rounded-lg px-space-sm"
+                  >
+                    <div class="flex flex-col">
+                      <span class="font-label-mono text-label-mono text-outline"
+                        >60 FPS</span
+                      >
+                      <span
+                        class="font-code-sm text-code-sm text-primary font-semibold"
+                        >Render Rate</span
+                      >
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="font-label-mono text-label-mono text-outline"
+                        >0ms</span
+                      >
+                      <span
+                        class="font-code-sm text-code-sm text-tertiary font-semibold"
+                        >Thread Lock</span
+                      >
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="font-label-mono text-label-mono text-outline"
+                        >100k+</span
+                      >
+                      <span
+                        class="font-code-sm text-code-sm text-on-surface font-semibold"
+                        >Events / Sec</span
+                      >
+                    </div>
+                  </div>
+                  <!-- Tech Badges -->
+                  <div class="flex flex-wrap gap-1.5">
+                    <span
+                      class="px-space-xs py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                      >Vue 3</span
+                    >
+                    <span
+                      class="px-space-xs py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                      >Canvas API</span
+                    >
+                    <span
+                      class="px-space-xs py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                      >Web Workers</span
+                    >
+                    <span
+                      class="px-space-xs py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                      >RxJS</span
+                    >
+                    <span
+                      class="px-space-xs py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface-variant"
+                      >Fastify</span
+                    >
+                  </div>
+                  <!-- Action Links -->
+                  <div class="flex items-center gap-space-sm pt-space-xs">
+                    <a
+                      class="flex-1 inline-flex items-center justify-center gap-space-xs py-space-xs px-space-sm rounded-lg bg-surface-container-high text-on-surface font-code-sm text-code-sm font-semibold hover:text-primary transition-colors"
+                      href="#"
+                    >
+                      <span class="material-symbols-outlined text-[16px]"
+                        >stream</span
+                      >
+                      <span>Telemetry Cockpit</span>
+                    </a>
+                    <a
+                      class="inline-flex items-center justify-center gap-space-xs p-space-xs rounded-lg bg-surface-container text-on-surface hover:text-primary transition-colors"
+                      href="#"
+                    >
+                      <span class="material-symbols-outlined text-[20px]"
+                        >code</span
+                      >
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 4. Skills & Technical Architecture Matrix -->
+        <section
+          class="w-full bg-surface-container-lowest py-space-xl"
+          id="skills"
+        >
+          <div
+            class="max-w-[1280px] w-full mx-auto px-margin md:px-margin-md lg:px-margin-lg flex flex-col gap-space-lg"
+          >
+            <!-- Section Header -->
+            <div class="flex flex-col gap-space-xs">
+              <div
+                class="flex items-center gap-space-xs font-label-mono text-label-mono text-primary uppercase tracking-widest"
+              >
+                <span class="material-symbols-outlined text-[16px]"
+                  >layers</span
+                >
+                <span>CAPABILITY MATRIX</span>
+              </div>
+              <h2
+                class="font-headline-lg text-headline-lg text-on-surface font-bold"
+              >
+                Skills & Technical Architecture
+              </h2>
+              <p
+                class="font-body-md text-body-md text-on-surface-variant max-w-2xl"
+              >
+                Deep mastery across the frontend lifecycle, systems
+                architecture, distributed backend pipelines, and modern test
+                automation.
+              </p>
+            </div>
+            <!-- Matrix Grid: 4 Dedicated Pillars -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-md"
+            >
+              <!-- Pillar 1: Frontend Architecture -->
+              <div
+                class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between gap-space-md hover:bg-surface-container transition-all"
+              >
+                <div class="flex flex-col gap-space-sm">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary"
+                  >
+                    <span class="material-symbols-outlined text-[22px]"
+                      >developer_mode</span
+                    >
+                  </div>
+                  <div class="flex flex-col">
+                    <h3
+                      class="font-headline-sm text-headline-sm text-on-surface font-semibold"
+                    >
+                      Frontend Architecture
+                    </h3>
+                    <span
+                      class="font-label-mono text-label-mono text-primary uppercase"
+                      >Core Domain</span
+                    >
+                  </div>
+                  <ul
+                    class="flex flex-col gap-space-xs pt-space-xs font-body-sm text-body-sm text-on-surface-variant"
+                  >
+                    <li class="flex items-center justify-between">
+                      <span>Vue 3 (Composition API)</span>
+                      <span
+                        class="font-label-mono text-label-mono text-tertiary"
+                        >Expert</span
+                      >
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <span>TypeScript (Strict Mode)</span>
+                      <span
+                        class="font-label-mono text-label-mono text-tertiary"
+                        >Expert</span
+                      >
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <span>Pinia / Global State</span>
+                      <span
+                        class="font-label-mono text-label-mono text-tertiary"
+                        >Advanced</span
+                      >
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <span>React / Next.js</span>
+                      <span
+                        class="font-label-mono text-label-mono text-secondary"
+                        >Proficient</span
+                      >
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <span>Vite & Micro-Frontends</span>
+                      <span
+                        class="font-label-mono text-label-mono text-tertiary"
+                        >Advanced</span
+                      >
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <span>Tailwind CSS Systems</span>
+                      <span
+                        class="font-label-mono text-label-mono text-tertiary"
+                        >Expert</span
+                      >
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <span>Core Web Vitals Perf</span>
+                      <span
+                        class="font-label-mono text-label-mono text-tertiary"
+                        >Top 1%</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <!-- Gauge Indicator -->
+                <div
+                  class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden"
+                >
+                  <div
+                    class="bg-primary h-full rounded-full"
+                    style="width: 98%"
+                  ></div>
+                </div>
+              </div>
+              <!-- Pillar 2: Backend & APIs -->
+              <div
+                class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between gap-space-md hover:bg-surface-container transition-all"
+              >
+                <div class="flex flex-col gap-space-sm">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary"
+                  >
+                    <span class="material-symbols-outlined text-[22px]"
+                      >dns</span
+                    >
+                  </div>
+                  <div class="flex flex-col">
+                    <h3
+                      class="font-headline-sm text-headline-sm text-on-surface font-semibold"
+                    >
+                      Backend & APIs
+                    </h3>
+                    <span
+                      class="font-label-mono text-label-mono text-secondary uppercase"
+                      >Distributed Services</span
+                    >
+                  </div>
+                  <ul
+                    class="flex flex-col gap-space-xs pt-space-xs font-body-sm text-body-sm text-on-surface-variant"
+                  >
+                    <li class="flex items-center justify-between">
+                      <span>Node.js / Express</span>
+                      <span
+                        class="font-label-mono text-label-mono text-tertiary"
+                        >Advanced</span
+                      >
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <span>NestJS Modular Backend</span>
+                      <span
+                        class="font-label-mono text-label-mono text-secondary"
+                        >Proficient</span
+                      >
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <span>RESTful API Design</span>
+                      <span
+                        class="font-label-mono text-label-mono text-tertiary"
+                        >Expert</span
+                      >
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <span>GraphQL Schemas</span>
+                      <span
+                        class="font-label-mono text-label-mono text-secondary"
+                        >Proficient</span
+                      >
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <span>WebSocket Streaming</span>
+                      <span
+                        class="font-label-mono text-label-mono text-tertiary"
+                        >Advanced</span
+                      >
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <span>Event-Driven Patterns</span>
+                      <span
+                        class="font-label-mono text-label-mono text-secondary"
+                        >Proficient</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <!-- Gauge Indicator -->
+                <div
+                  class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden"
+                >
+                  <div
+                    class="bg-secondary h-full rounded-full"
+                    style="width: 88%"
+                  ></div>
+                </div>
+              </div>
+              <!-- Pillar 3: Databases & Storage -->
+              <div
+                class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between gap-space-md hover:bg-surface-container transition-all"
+              >
+                <div class="flex flex-col gap-space-sm">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-tertiary/10 flex items-center justify-center text-tertiary"
+                  >
+                    <span class="material-symbols-outlined text-[22px]"
+                      >database</span
+                    >
+                  </div>
+                  <div class="flex flex-col">
+                    <h3
+                      class="font-headline-sm text-headline-sm text-on-surface font-semibold"
+                    >
+                      Databases & Storage
+                    </h3>
+                    <span
+                      class="font-label-mono text-label-mono text-tertiary uppercase"
+                      >Latency & Queries</span
+                    >
+                  </div>
+                  <ul
+                    class="flex flex-col gap-space-xs pt-space-xs font-body-sm text-body-sm text-on-surface-variant"
+                  >
+                    <li class="flex items-center justify-between">
+                      <span>PostgreSQL Optimization</span>
+                      <span
+                        class="font-label-mono text-label-mono text-tertiary"
+                        >Advanced</span
+                      >
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <span>Composite Indexing</span>
+                      <span
+                        class="font-label-mono text-label-mono text-tertiary"
+                        >Advanced</span
+                      >
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <span>Redis In-Memory Caching</span>
+                      <span
+                        class="font-label-mono text-label-mono text-tertiary"
+                        >Advanced</span
+                      >
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <span>Supabase Ecosystem</span>
+                      <span
+                        class="font-label-mono text-label-mono text-secondary"
+                        >Proficient</span
+                      >
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <span>Prisma ORM</span>
+                      <span
+                        class="font-label-mono text-label-mono text-tertiary"
+                        >Advanced</span
+                      >
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <span>ACID Compliance</span>
+                      <span
+                        class="font-label-mono text-label-mono text-tertiary"
+                        >Robust</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <!-- Gauge Indicator -->
+                <div
+                  class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden"
+                >
+                  <div
+                    class="bg-tertiary h-full rounded-full"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+              <!-- Pillar 4: DevOps, Tooling & Testing -->
+              <div
+                class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between gap-space-md hover:bg-surface-container transition-all"
+              >
+                <div class="flex flex-col gap-space-sm">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-surface-tint/10 flex items-center justify-center text-primary-fixed-dim"
+                  >
+                    <span class="material-symbols-outlined text-[22px]"
+                      >terminal</span
+                    >
+                  </div>
+                  <div class="flex flex-col">
+                    <h3
+                      class="font-headline-sm text-headline-sm text-on-surface font-semibold"
+                    >
+                      DevOps & Testing
+                    </h3>
+                    <span
+                      class="font-label-mono text-label-mono text-primary-fixed-dim uppercase"
+                      >Quality Automation</span
+                    >
+                  </div>
+                  <ul
+                    class="flex flex-col gap-space-xs pt-space-xs font-body-sm text-body-sm text-on-surface-variant"
+                  >
+                    <li class="flex items-center justify-between">
+                      <span>Vitest Unit & Integrations</span>
+                      <span
+                        class="font-label-mono text-label-mono text-tertiary"
+                        >Expert</span
+                      >
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <span>Cypress & Playwright E2E</span>
+                      <span
+                        class="font-label-mono text-label-mono text-tertiary"
+                        >Advanced</span
+                      >
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <span>GitHub Actions CI/CD</span>
+                      <span
+                        class="font-label-mono text-label-mono text-tertiary"
+                        >Advanced</span
+                      >
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <span>Docker Containerization</span>
+                      <span
+                        class="font-label-mono text-label-mono text-secondary"
+                        >Proficient</span
+                      >
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <span>Linux Server Tuning</span>
+                      <span
+                        class="font-label-mono text-label-mono text-secondary"
+                        >Proficient</span
+                      >
+                    </li>
+                    <li class="flex items-center justify-between">
+                      <span>Git Workflows & Hooks</span>
+                      <span
+                        class="font-label-mono text-label-mono text-tertiary"
+                        >Expert</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <!-- Gauge Indicator -->
+                <div
+                  class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden"
+                >
+                  <div
+                    class="bg-primary-fixed-dim h-full rounded-full"
+                    style="width: 92%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 5. Interactive Contact & Call to Action -->
+        <section
+          class="w-full py-space-xl relative overflow-hidden"
+          id="contact"
+        >
+          <div
+            class="max-w-[1280px] w-full mx-auto px-margin md:px-margin-md lg:px-margin-lg"
+          >
+            <div
+              class="rounded-2xl bg-surface-container-low p-space-lg md:p-space-xl shadow-2xl relative overflow-hidden flex flex-col gap-space-lg"
+            >
+              <!-- Ambient radial background glow -->
+              <div
+                class="absolute -right-20 -bottom-20 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"
+              ></div>
+              <div
+                class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center"
+              >
+                <!-- Contact Left Statement -->
+                <div class="lg:col-span-7 flex flex-col gap-space-sm">
+                  <div
+                    class="inline-flex items-center gap-space-xs font-label-mono text-label-mono text-tertiary uppercase tracking-widest"
+                  >
+                    <span class="material-symbols-outlined text-[16px]"
+                      >handshake</span
+                    >
+                    <span>ENGINEERING COLLABORATION</span>
+                  </div>
+                  <h2
+                    class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight"
+                  >
+                    Let's architect something
+                    <span
+                      class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-tertiary"
+                      >extraordinary</span
+                    >.
+                  </h2>
+                  <p
+                    class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed"
+                  >
+                    Available for senior frontend engineering roles,
+                    architectural consultation, complex migration roadmaps, or
+                    high-performance design system initiatives.
+                  </p>
+                  <!-- Quick copy interaction feedback element -->
+                  <div
+                    class="pt-space-xs flex flex-wrap items-center gap-space-sm"
+                  >
+                    <div
+                      class="p-space-sm rounded-lg bg-surface-container flex items-center justify-between gap-space-md"
+                    >
+                      <div class="flex items-center gap-space-xs">
+                        <span
+                          class="material-symbols-outlined text-[18px] text-primary"
+                          >mail</span
+                        >
+                        <span
+                          class="font-code-md text-code-md text-on-surface select-all"
+                          >victor.leon.carreno@gmail.com</span
+                        >
+                      </div>
+                      <button
+                        class="px-space-sm py-space-xs rounded bg-surface-container-high hover:bg-primary-container hover:text-on-primary text-on-surface font-code-sm text-code-sm transition-all"
+                        onclick="
+                          navigator.clipboard.writeText(
+                            'victor.leon.carreno@gmail.com',
+                          );
+                          const btn = this;
+                          btn.innerText = 'Copied!';
+                          setTimeout(() => (btn.innerText = 'Copy'), 2000);
+                        "
+                      >
+                        Copy
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <!-- Contact Quick Access Cards -->
+                <div
+                  class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-space-sm"
+                >
+                  <!-- LinkedIn -->
+                  <a
+                    class="p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high transition-all flex flex-col gap-space-xs shadow-sm group"
+                    href="https://linkedin.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <div
+                      class="flex items-center justify-between text-outline group-hover:text-primary transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-[20px]"
+                        >share</span
+                      >
+                      <span class="material-symbols-outlined text-[16px]"
+                        >north_east</span
+                      >
+                    </div>
+                    <span
+                      class="font-code-md text-code-md text-on-surface font-semibold"
+                      >LinkedIn Profile</span
+                    >
+                    <span
+                      class="font-body-sm text-body-sm text-on-surface-variant"
+                      >Connect professionally</span
+                    >
+                  </a>
+                  <!-- GitHub -->
+                  <a
+                    class="p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high transition-all flex flex-col gap-space-xs shadow-sm group"
+                    href="https://github.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <div
+                      class="flex items-center justify-between text-outline group-hover:text-primary transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-[20px]"
+                        >terminal</span
+                      >
+                      <span class="material-symbols-outlined text-[16px]"
+                        >north_east</span
+                      >
+                    </div>
+                    <span
+                      class="font-code-md text-code-md text-on-surface font-semibold"
+                      >GitHub Commits</span
+                    >
+                    <span
+                      class="font-body-sm text-body-sm text-on-surface-variant"
+                      >Audit open repositories</span
+                    >
+                  </a>
+                  <!-- Schedule Meeting -->
+                  <a
+                    class="p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high transition-all flex flex-col gap-space-xs shadow-sm group"
+                    href="mailto:victor.leon.carreno@gmail.com?subject=Senior%20Engineering%20Discussion"
+                  >
+                    <div
+                      class="flex items-center justify-between text-outline group-hover:text-tertiary transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-[20px]"
+                        >calendar_today</span
+                      >
+                      <span class="material-symbols-outlined text-[16px]"
+                        >north_east</span
+                      >
+                    </div>
+                    <span
+                      class="font-code-md text-code-md text-on-surface font-semibold"
+                      >Schedule Call</span
+                    >
+                    <span
+                      class="font-body-sm text-body-sm text-on-surface-variant"
+                      >Direct technical discovery</span
+                    >
+                  </a>
+                  <!-- Download CV / Resume -->
+                  <a
+                    class="p-space-md rounded-xl bg-surface-container hover:bg-surface-container-high transition-all flex flex-col gap-space-xs shadow-sm group"
+                    href="#"
+                    onclick="
+                      alert(
+                        'Downloading Víctor León Carreño Senior Frontend Architect CV (PDF)...',
+                      );
+                      return false;
+                    "
+                  >
+                    <div
+                      class="flex items-center justify-between text-outline group-hover:text-primary transition-colors"
+                    >
+                      <span class="material-symbols-outlined text-[20px]"
+                        >download</span
+                      >
+                      <span class="material-symbols-outlined text-[16px]"
+                        >description</span
+                      >
+                    </div>
+                    <span
+                      class="font-code-md text-code-md text-on-surface font-semibold"
+                      >Download CV</span
+                    >
+                    <span
+                      class="font-body-sm text-body-sm text-on-surface-variant"
+                      >Full PDF dossier (2025)</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="w-full bg-surface-container-lowest py-space-xl">
+      <div
+        class="max-w-[1280px] mx-auto px-margin md:px-margin-md lg:px-margin-lg flex flex-col md:flex-row items-center justify-between gap-space-lg"
+      >
+        <div class="flex flex-col items-center md:items-start gap-space-xs">
+          <div class="flex items-center gap-space-xs">
+            <span class="font-code-md text-code-md text-primary">{ VLC }</span
+            ><span class="font-body-sm text-body-sm text-on-surface-variant"
+              >Víctor Eduardo León Carreño</span
+            >
+          </div>
+          <p class="font-body-sm text-body-sm text-outline">
+            © 2025 Senior Frontend Engineer. Crafted with architectural
+            precision.
+          </p>
+        </div>
+        <div
+          class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-low"
+        >
+          <span class="w-2 h-2 rounded-full bg-tertiary"></span
+          ><span class="font-code-sm text-code-sm text-on-surface"
+            >Available for select opportunities</span
+          >
+        </div>
+        <div class="flex items-center gap-space-md">
+          <a
+            class="font-code-sm text-code-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-space-xs"
+            href="#"
+            ><span class="material-symbols-outlined text-[16px]">terminal</span
+            ><span>GitHub</span></a
+          ><a
+            class="font-code-sm text-code-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-space-xs"
+            href="#"
+            ><span class="material-symbols-outlined text-[16px]">share</span
+            ><span>LinkedIn</span></a
+          ><a
+            class="font-code-sm text-code-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-space-xs"
+            href="#"
+            ><span class="material-symbols-outlined text-[16px]">mail</span
+            ><span>Email</span></a
+          ><a
+            class="font-code-sm text-code-sm text-primary hover:text-primary-fixed-dim transition-colors flex items-center gap-space-xs"
+            href="#"
+            ><span class="material-symbols-outlined text-[16px]">download</span
+            ><span>Resume / CV</span></a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
