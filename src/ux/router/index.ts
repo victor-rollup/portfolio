@@ -3,6 +3,7 @@ import {
   createWebHistory,
   type RouteRecordRaw,
 } from 'vue-router';
+import HomePage from '@/ui/views/home.vue';
 
 const DEFAULT_TITLE = 'Portafolio | Víctor León - Desarrollador Frontend';
 
@@ -12,7 +13,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '',
     name: 'home',
-    component: () => import('@/ui/views/home.vue'),
+    component: HomePage,
     meta: {
       title: DEFAULT_TITLE,
       description:
