@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <style>
+      .bg { fill: transparent; }
+      .symbol { 
+        fill: none; 
+        stroke: #1e293b; 
+        stroke-width: 20; 
+        stroke-linecap: round; 
+        stroke-linejoin: round; 
+      }
+      .text-vlc { 
+        fill: #1e293b; 
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; 
+        font-weight: 800; 
+        font-size: 110px; 
+        letter-spacing: -2px; 
+      }
+
+      /* Soporte para Modo Oscuro */
+      @media (prefers-color-scheme: dark) {
+        .symbol { stroke: #38bdf8; }
+        .text-vlc { fill: #f8fafc; }
+      }
+    </style>
+  </defs>
+
+  <!-- Fondo transparente -->
+  <rect class="bg" width="500" height="500" />
+
+  <!-- Corchetes { } -->
+  <!-- Izquierdo -->
+  <path class="symbol" d="M 120 120 C 120 120 90 120 90 170 L 90 220 C 90 235 70 250 50 250 C 70 250 90 265 90 280 L 90 330 C 90 380 120 380 120 380" />
+  
+  <!-- Derecho -->
+  <path class="symbol" d="M 380 120 C 380 120 410 120 410 170 L 410 220 C 410 235 430 250 450 250 C 430 250 410 265 410 280 L 410 330 C 410 380 380 380 380 380" />
+
+  <!-- Texto VLC -->
+  <text x="250" y="285" text-anchor="middle" class="text-vlc">VLC</text>
+</svg>
