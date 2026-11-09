@@ -33,6 +33,10 @@
 .flex-auto {
   flex: 1 1 auto;
 }
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
 /* --------------------------------------------------------------------------------------------- */
 .text-truncate {
   display: inline-block;
