@@ -1,15 +1,45 @@
 <script setup lang="ts">
   import TLayout from '@/ui/components/TLayout.vue';
+  import Logo from '@/ui/assets/logo.svg';
 </script>
 
 <template>
-  <TLayout :showHeader="true" :showFooter="true">
+  <TLayout :showHeader="true" :showFooter="true" class="display">
     <template #TLayoutHeader>
-      <div class="header__brand">
-        <span class="header__bracket">{</span>
-        <span class="header__initials">VLC</span>
-        <span class="header__bracket">}</span>
-        <span class="header__title">Víctor León</span>
+      <div class="display__header | row">
+        <div class="display__header-container | row">
+          <img :src="Logo" alt="" height="50" draggable="false" />
+          <h1 class="display__title">Víctor Eduardo León Carreño</h1>
+        </div>
+        <nav>
+          <ul class="display__navigation-list | row">
+            <li>
+              <a href="#about" class="display__navigation-list-option"
+                >Acerca de</a
+              >
+            </li>
+            <li>
+              <a href="#experience" class="display__navigation-list-option"
+                >Experiencia</a
+              >
+            </li>
+            <li>
+              <a href="#projects" class="display__navigation-list-option"
+                >Proyectos</a
+              >
+            </li>
+            <li>
+              <a href="#skills" class="display__navigation-list-option"
+                >Habilidades</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="display__navigation-list-option"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
     </template>
 
@@ -22,14 +52,38 @@
 </template>
 
 <style scoped>
-  .header__brand {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    font-weight: bold;
+  .display {
+    background: rgb(13, 28, 45);
   }
 
-  .header__bracket {
-    color: var(--theme-primary-color-500, #3b82f6);
+  .display__header {
+    align-items: center;
+    gap: 2rem;
+    border-bottom: 0.0125rem solid;
+    background: rgb(5, 20, 36);
+    height: 4rem;
+  }
+
+  .display__header-container {
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .display__title {
+    font-size: 1rem;
+  }
+
+  .display__navigation-list {
+    gap: 1rem;
+  }
+
+  .display__navigation-list-option {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    display: block;
+  }
+
+  .display__navigation-list-option:active {
+    background: rgb(35, 35, 70);
   }
 </style>
