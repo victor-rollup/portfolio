@@ -12,7 +12,7 @@
 </script>
 
 <template>
-  <section class="section">
+  <section class="section | column">
     <header class="section__header">
       <div class="section__description-container | row">
         <component :is="props.icon" class="section__icon" />
@@ -31,23 +31,39 @@
   .section {
     padding-block: 2rem;
     padding-inline: 4rem;
+    gap: 2rem;
   }
+
   .section__details {
     color: rgb(189 200 209);
   }
+
   .section__icon,
   .section__description {
     color: rgb(142 213 255);
     text-transform: uppercase;
   }
+
+  .section__description {
+    font-weight: bold;
+  }
+
   .section__description-container {
     gap: 0.5rem;
     align-items: center;
   }
+
   .section__title {
     font-size: 2rem;
   }
+
   .section__details {
     max-width: 36rem;
+  }
+
+  @media(orientation: portrait) {
+    .section {
+      padding-inline: 2rem;
+    }
   }
 </style>
