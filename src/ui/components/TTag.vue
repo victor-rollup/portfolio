@@ -1,12 +1,5 @@
 <script setup lang="ts">
-  import type { Component } from 'vue';
-
-  interface ITag {
-    icon?: Component;
-    label: string;
-    color?: string;
-    background?: string;
-  }
+  import type { ITag } from '@/types/component.types';
 
   const props = defineProps<ITag>();
 </script>
@@ -18,7 +11,9 @@
       class="tag__icon"
       :style="{ color: props.color }"
     />
-    <small class="tag__label" :style="{ color: props.color }">{{ props.label }}</small>
+    <small class="tag__label" :style="{ color: props.color }">{{
+      props.label
+    }}</small>
   </span>
 </template>
 

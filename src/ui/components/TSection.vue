@@ -1,12 +1,5 @@
 <script setup lang="ts">
-  import type { Component } from 'vue';
-
-  interface ISection {
-    icon: Component;
-    title: string;
-    details: string;
-    description: string;
-  }
+  import type { ISection } from '@/types/component.types';
 
   const props = defineProps<ISection>();
 </script>
@@ -61,7 +54,7 @@
     max-width: 36rem;
   }
 
-  @media(orientation: portrait) {
+  @media (orientation: portrait) {
     .section {
       padding-inline: 2rem;
     }

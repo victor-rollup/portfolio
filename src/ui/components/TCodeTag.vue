@@ -1,7 +1,5 @@
 <script setup lang="ts">
-  interface ICodeTag {
-    type?: string;
-  }
+  import type { ICodeTag } from '@/types/component.types';
 
   const props = withDefaults(defineProps<ICodeTag>(), {
     type: 'default',

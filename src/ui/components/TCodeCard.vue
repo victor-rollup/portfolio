@@ -38,32 +38,32 @@
       </div>
       <div class="code-card__line-row">
         <span class="code-card__line">04</span>
-        <TCodeTag type="property">&nbsp;&nbsp;specialization: </TCodeTag>
+        <TCodeTag type="property" class="code-card__object-property">specialization: </TCodeTag>
         <TCodeTag type="string">'Vue 3 Composition API & Pinia'</TCodeTag>
         <TCodeTag>,</TCodeTag>
       </div>
       <div class="code-card__line-row">
         <span class="code-card__line">05</span>
-        <TCodeTag type="property">&nbsp;&nbsp;performance: </TCodeTag>
+        <TCodeTag type="property" class="code-card__object-property">performance: </TCodeTag>
         <TCodeTag type="string">'100%'</TCodeTag>
         <TCodeTag>, </TCodeTag>
         <TCodeTag type="comment">// lighthouse standard result</TCodeTag>
       </div>
       <div class="code-card__line-row">
         <span class="code-card__line">06</span>
-        <TCodeTag type="property">&nbsp;&nbsp;bundleBudget: </TCodeTag>
+        <TCodeTag type="property" class="code-card__object-property">bundleBudget: </TCodeTag>
         <TCodeTag type="string">'Strict 45kb gzip per chunk'</TCodeTag>
         <TCodeTag>, </TCodeTag>
       </div>
       <div class="code-card__line-row">
         <span class="code-card__line">07</span>
-        <TCodeTag type="property">&nbsp;&nbsp;typeIntegrity: </TCodeTag>
+        <TCodeTag type="property" class="code-card__object-property">typeIntegrity: </TCodeTag>
         <TCodeTag type="string">'Strict TypeScript 100%'</TCodeTag>
         <TCodeTag>, </TCodeTag>
       </div>
       <div class="code-card__line-row">
         <span class="code-card__line">08</span>
-        <TCodeTag type="property">&nbsp;&nbsp;status: </TCodeTag>
+        <TCodeTag type="property" class="code-card__object-property">status: </TCodeTag>
         <TCodeTag type="string">'Production Ready & High Scale'</TCodeTag>
         <TCodeTag>, </TCodeTag>
       </div>
@@ -202,5 +202,9 @@
 
   .code-card__metric-value--highlight {
     color: var(--dark-modern-green-color);
+  }
+
+  .code-card__object-property {
+    text-indent: 1rem;
   }
 </style>

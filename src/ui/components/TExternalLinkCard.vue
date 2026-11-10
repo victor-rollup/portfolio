@@ -1,15 +1,6 @@
 <script setup lang="ts">
-  import type { Component } from 'vue';
+  import type { IExternalLinkCard } from '@/types/component.types.ts';
   import TIconExternalLink from './icons/TIconExternalLink.vue';
-
-  interface IExternalLinkCard {
-    icon: Component;
-    hyperlink: string;
-    showExternalIcon?: boolean;
-    label: string;
-    description: string;
-    filename?: string;
-  }
 
   const props = defineProps<IExternalLinkCard>();
 </script>

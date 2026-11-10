@@ -1,10 +1,5 @@
 <script setup lang="ts">
-  interface IMetricCard {
-    label: string;
-    value: string;
-    description: string;
-    color?: string;
-  }
+  import type { IMetricCard } from '@/types/component.types';
 
   const props = defineProps<IMetricCard>();
 </script>

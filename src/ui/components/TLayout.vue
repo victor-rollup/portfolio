@@ -1,10 +1,5 @@
 <script setup lang="ts">
-  interface ILayout {
-    showHeader?: boolean;
-    showFooter?: boolean;
-    showPrimarySidebar?: boolean;
-    showSecondarySidebar?: boolean;
-  }
+  import type { ILayout } from '@/types/component.types';
 
   const props = defineProps<ILayout>();
 </script>
