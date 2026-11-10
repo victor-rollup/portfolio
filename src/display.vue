@@ -19,13 +19,13 @@
               >
             </li>
             <li>
-              <a href="#experience" class="display__navigation-list-option"
-                >Experiencia</a
+              <a href="#projects" class="display__navigation-list-option"
+                >Proyectos</a
               >
             </li>
             <li>
-              <a href="#projects" class="display__navigation-list-option"
-                >Proyectos</a
+              <a href="#experience" class="display__navigation-list-option"
+                >Experiencia</a
               >
             </li>
             <li>
@@ -45,15 +45,20 @@
 
     <RouterView />
 
-    <template #TLayoutFooter>
+    <div class="display__footer">
       <p>&copy; 2026 Víctor León. Frontend Engineer Senior.</p>
-    </template>
+    </div>
   </TLayout>
 </template>
 
 <style scoped>
   .display {
     background: rgb(13, 28, 45);
+    background: rgb(5, 20, 36);
+  }
+
+  .display__footer {
+    min-height: 20rem;
   }
 
   .display__header {
@@ -62,6 +67,7 @@
     border-bottom: 0.0125rem solid;
     background: rgb(5, 20, 36);
     height: 4rem;
+    padding-inline: 1rem;
   }
 
   .display__header-container {
@@ -85,5 +91,11 @@
 
   .display__navigation-list-option:active {
     background: rgb(35, 35, 70);
+  }
+
+  @media(orientation: portrait) {
+    .display__navigation-list {
+      display: none;
+    }
   }
 </style>
