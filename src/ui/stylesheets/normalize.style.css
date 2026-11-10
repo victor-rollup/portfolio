@@ -47,6 +47,10 @@ small {
   font-size: 0.75rem;
 }
 
+span {
+  display: inline-block;
+}
+
 select {
   display: flex;
   align-items: center;
