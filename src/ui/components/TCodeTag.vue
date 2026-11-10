@@ -9,19 +9,16 @@
 </script>
 
 <template>
-  <code class="code-tag" :class="[`code-tag--${props.type}`]">
+  <span class="code-tag" :class="[`code-tag--${props.type}`]">
     <slot />
-  </code>
+  </span>
 </template>
 
 <style scoped>
   .code-tag {
     font-family: 'Consolas', 'Courier New', monospace;
-    padding: 0.2rem 0.4rem;
     border-radius: 0.25rem;
     color: #d4d4d4;
-    /* background-color: #2b2b2b; */
-    /* border: 0.0125rem solid #3c3c3c; */
   }
 
   .code-tag--keyword {
